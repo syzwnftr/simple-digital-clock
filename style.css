@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  outline: 1px solid black;
+  height: 100vh;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  color: #fff;
+}
+
+.clock-time,
+.clock-ampm {
+  font-family: "Rajdhani", sans-serif;
+}
+
+.clock-time {
+  font-size: 4rem;
+}
+
+.clock-ampm {
+  font-size: 2rem;
+}
