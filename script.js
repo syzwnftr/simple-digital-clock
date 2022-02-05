@@ -1,3 +1,15 @@
+// Dark / Light theme mode
+const chckbox = document.querySelector('#checkbox');
+
+chckbox.addEventListener('change', () => {
+    // Change the theme color
+    document.body.classList.toggle('dark');
+
+    // Change text color
+    document.querySelector('.container').classList.toggle('dark');
+})
+
+// Clock parts
 class DigitalClock {
     constructor(element) {
         this.element = element;
