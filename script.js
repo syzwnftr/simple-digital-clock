@@ -1,13 +1,41 @@
-// Dark / Light theme mode
 const chckbox = document.querySelector('#checkbox');
+let theme = localStorage.getItem('theme');
+const body = document.querySelector('body');
+const clock = document.querySelector('.clock');
+
+const enableDarkMode = () => {
+    body.classList.add('dark');
+    clock.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+}
+
+const disableDarkMode = () => {
+    body.classList.remove('dark');
+    clock.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+}
+
+if(theme == 'dark') {
+    enableDarkMode();
+}
+
+const toggleDarkMode = () => {
+    if(theme !== 'dark') {
+       enableDarkMode();
+       theme = localStorage.getItem('theme');
+       console.log('theme:', theme);
+    } else {
+       disableDarkMode();
+       theme = localStorage.getItem('theme');
+       console.log('theme:', theme);
+    }  
+};
 
 chckbox.addEventListener('change', () => {
-    // Change the theme color
-    document.body.classList.toggle('dark');
+    toggleDarkMode();  
+});
 
-    // Change text color
-    document.querySelector('.container').classList.toggle('dark');
-})
+
 
 // Clock parts
 class DigitalClock {
