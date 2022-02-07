@@ -37,6 +37,8 @@ chckbox.addEventListener('change', () => {
     toggleDarkMode();  
 });
 
+
+
 // Clock parts
 class DigitalClock {
     constructor(element) {
@@ -58,17 +60,24 @@ class DigitalClock {
         const timesFormatted = `${parts.hour}:${minutesFormatted}`;
         const amPm = parts.isAm ? "AM" : "PM";
 
+        const monthArr = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        const date = `${parts.date} ${monthArr[parts.month]} ${parts.year}`;
+
         this.element.querySelector('.clock-time').textContent = timesFormatted;
         this.element.querySelector('.clock-ampm').textContent = amPm;
+        this.element.querySelector('.clock-date').textContent = date;
     }
 
     getTimeParts() {
         const now = new Date();
 
         return {
-            hour : now.getHours() % 12 || 12, // returning 0-23 
-            minutes : now.getMinutes(), // returning 0-59
-            isAm : now.getHours() < 12  // returning boolean values
+            hour : now.getHours() % 12 || 12, // return 0-23 
+            minutes : now.getMinutes(), // return 0-59
+            isAm : now.getHours() < 12,  // return boolean values
+            date : now.getDate(), // return the day of the month (1-31)
+            month : now.getMonth(), // return the month of the day (0-11) Note: 0 = Jan, 1 = Feb 
+            year : now.getFullYear() // return the year of the date 
         };
     }
 }
