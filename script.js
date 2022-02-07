@@ -42,16 +42,16 @@ chckbox.addEventListener('change', () => {
 // Clock parts
 class DigitalClock {
     constructor(element) {
-        this.element = element;
+        this.element = element; // refer to clockElement which refer to document.querySelector('.clock')
     }
 
-    // Start the clock upon opening, updating every half a second
+    // Start the clock upon opening and updating every half a second
     start() {
-        this.updateTime();
+        this.updateTime(); // start the clock
         
         setInterval(() => {
             this.updateTime();
-        }, 500); 
+        }, 500);  // update every half a second
     }
 
     updateTime() {
