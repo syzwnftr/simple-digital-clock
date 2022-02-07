@@ -75,7 +75,8 @@ body.dark {
 }
 
 .clock-time,
-.clock-ampm {
+.clock-ampm,
+.clock-date {
   font-family: "Rajdhani", sans-serif;
 }
 
@@ -85,4 +86,8 @@ body.dark {
 
 .clock-ampm {
   font-size: 2rem;
+}
+
+.clock-date {
+  font-size: 1.5rem;
 }
