@@ -6,12 +6,14 @@ const clock = document.querySelector('.clock');
 const enableDarkMode = () => {
     body.classList.add('dark');
     clock.classList.add('dark');
+    chckbox.checked = true;
     localStorage.setItem('theme', 'dark');
 }
 
 const disableDarkMode = () => {
     body.classList.remove('dark');
     clock.classList.remove('dark');
+    chckbox.checked = false;
     localStorage.setItem('theme', 'light');
 }
 
@@ -34,8 +36,6 @@ const toggleDarkMode = () => {
 chckbox.addEventListener('change', () => {
     toggleDarkMode();  
 });
-
-
 
 // Clock parts
 class DigitalClock {
