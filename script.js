@@ -25,11 +25,9 @@ const toggleDarkMode = () => {
     if(theme !== 'dark') {
        enableDarkMode();
        theme = localStorage.getItem('theme');
-       console.log('theme:', theme);
     } else {
        disableDarkMode();
        theme = localStorage.getItem('theme');
-       console.log('theme:', theme);
     }  
 };
 
