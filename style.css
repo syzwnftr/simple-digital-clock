@@ -13,11 +13,11 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
 }
 
 body.dark {
-  background-color: #292c35;
+  background-color: #1d1e20;
 }
 
 .checkbox-div {
