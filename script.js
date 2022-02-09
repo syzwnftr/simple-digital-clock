@@ -2,10 +2,12 @@ const chckbox = document.querySelector('#checkbox');
 let theme = localStorage.getItem('theme');
 const body = document.querySelector('body');
 const clock = document.querySelector('.clock');
+const dateText = document.querySelector('.clock-date');
 
 const enableDarkMode = () => {
     body.classList.add('dark');
     clock.classList.add('dark');
+    dateText.classList.add('dark');
     chckbox.checked = true;
     localStorage.setItem('theme', 'dark');
 }
@@ -13,6 +15,7 @@ const enableDarkMode = () => {
 const disableDarkMode = () => {
     body.classList.remove('dark');
     clock.classList.remove('dark');
+    dateText.classList.remove('dark');
     chckbox.checked = false;
     localStorage.setItem('theme', 'light');
 }
