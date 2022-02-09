@@ -7,7 +7,6 @@
 }
 
 body {
-  outline: 1px solid black;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -63,7 +62,8 @@ body.dark {
   top: 1px;
   left: 2px;
   border-radius: 50%;
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out 0.2s,
+    background-color 0.2s ease-in-out 0.3s;
 }
 
 .checkbox:checked + .label .ball {
@@ -86,11 +86,11 @@ body.dark {
 }
 
 .clock-ampm {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .clock-date {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .clock-date.dark {
