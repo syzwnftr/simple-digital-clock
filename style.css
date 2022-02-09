@@ -58,16 +58,17 @@ body.dark {
 .ball {
   width: 23px;
   height: 23px;
-  background-color: #fff;
+  background-color: #f39c12;
   position: absolute;
   top: 1px;
   left: 2px;
   border-radius: 50%;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .checkbox:checked + .label .ball {
   transform: translateX(33px);
+  background-color: #f1c40f;
 }
 
 .clock.dark {
@@ -93,5 +94,5 @@ body.dark {
 }
 
 .clock-date.dark {
-  color: #fde300;
+  color: #f1c40f;
 }
