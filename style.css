@@ -91,3 +91,7 @@ body.dark {
 .clock-date {
   font-size: 1.5rem;
 }
+
+.clock-date.dark {
+  color: #fde300;
+}
