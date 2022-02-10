@@ -44,11 +44,12 @@ body.dark {
   padding: 0.5rem;
   position: relative;
   cursor: pointer;
-  transition: box-shadow 0.2s ease-in-out, outline 0.2s ease-in-out;
+  outline: 7px solid transparent;
+  transition: box-shadow 0.5s ease-in-out, outline 0.5s ease-in-out;
 }
 
 .label:hover {
-  box-shadow: 0 0 3px #f39c12, 0 0 7px #f1c40f, 0 0 10px #f39c12;
+  box-shadow: 0 0 3px #f39c12, 0 0 7px #f1c40f, 0 0 20px #f39c12;
   outline: 2px solid #f1c40f;
 }
 
