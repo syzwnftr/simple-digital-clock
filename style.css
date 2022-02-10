@@ -13,6 +13,7 @@ body {
   align-items: center;
   position: relative;
   transition: background-color 0.4s ease-in-out;
+  background-color: #dde1e7;
 }
 
 body.dark {
@@ -34,8 +35,8 @@ body.dark {
 }
 
 .label {
-  background-color: #111;
-  width: 60px;
+  background-color: #dde1e7;
+  width: 70px;
   height: 26px;
   border-radius: 1.3rem;
   display: flex;
@@ -44,13 +45,17 @@ body.dark {
   padding: 0.5rem;
   position: relative;
   cursor: pointer;
-  outline: 7px solid transparent;
-  transition: box-shadow 0.5s ease-in-out, outline 0.5s ease-in-out;
+  /* making the icon look neumorphism */
+  box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.73),
+    3px 3px 5px rgba(0, 0, 0, 0.29);
+  transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
-.label:hover {
-  box-shadow: 0 0 3px #f39c12, 0 0 7px #f1c40f, 0 0 20px #f39c12;
-  outline: 2px solid #f1c40f;
+.checkbox:checked + .label {
+  background-color: #1d1e20;
+  /* making the icon look neumorphism */
+  box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
+    3px 3px 6px rgba(0, 0, 0, 0.8);
 }
 
 .fa-moon {
@@ -73,7 +78,7 @@ body.dark {
 }
 
 .checkbox:checked + .label .ball {
-  transform: translateX(33px);
+  transform: translateX(43px);
   background-color: #f1c40f;
 }
 
