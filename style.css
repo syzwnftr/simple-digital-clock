@@ -44,6 +44,12 @@ body.dark {
   padding: 0.5rem;
   position: relative;
   cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out, outline 0.2s ease-in-out;
+}
+
+.label:hover {
+  box-shadow: 0 0 3px #f39c12, 0 0 7px #f1c40f, 0 0 10px #f39c12;
+  outline: 2px solid #f1c40f;
 }
 
 .fa-moon {
@@ -62,8 +68,7 @@ body.dark {
   top: 1px;
   left: 2px;
   border-radius: 50%;
-  transition: transform 0.2s ease-in-out 0.2s,
-    background-color 0.2s ease-in-out 0.3s;
+  transition: transform 0.2s ease-in-out 0.2s, background-color 0.2s ease-in-out;
 }
 
 .checkbox:checked + .label .ball {
