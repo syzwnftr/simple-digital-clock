@@ -54,8 +54,8 @@ body.dark {
 .checkbox:checked + .label {
   background-color: #1d1e20;
   /* making the icon look neumorphism */
-  box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
-    3px 3px 6px rgba(0, 0, 0, 0.8);
+  box-shadow: inset -3px -3px 7px rgba(255, 255, 255, 0.1),
+    inset 3px 3px 5px rgba(0, 0, 0, 0.8);
 }
 
 .fa-moon {
