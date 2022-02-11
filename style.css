@@ -60,21 +60,41 @@ body.dark {
 
 .fa-moon {
   color: #f1c40f;
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  opacity: 0;
+  transition: transform 0.2s ease-in-out, opacity 0.3s linear;
+}
+
+.checkbox:checked + .label .fa-moon {
+  transform: translateX(-40px);
+  opacity: 1;
 }
 
 .fa-sun {
   color: #f39c12;
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  opacity: 1;
+  transition: transform 0.2s ease-in-out, opacity 0.3s linear;
+}
+
+.checkbox:checked + .label .fa-sun {
+  transform: translateX(-40px);
+  opacity: 0;
 }
 
 .ball {
-  width: 23px;
-  height: 23px;
+  width: 22px;
+  height: 22px;
   background-color: #f39c12;
   position: absolute;
-  top: 1px;
+  top: 2px;
   left: 2px;
   border-radius: 50%;
-  transition: transform 0.2s ease-in-out 0.2s, background-color 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .checkbox:checked + .label .ball {
