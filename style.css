@@ -127,3 +127,29 @@ body.dark {
 .clock-date.dark {
   color: #f1c40f;
 }
+
+.clock {
+  margin-bottom: 2rem;
+}
+
+.container {
+  outline: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.alarm-dialog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.alarm-dialog input {
+  margin-bottom: 1rem;
+}
+
+
+
