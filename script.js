@@ -58,7 +58,8 @@ class DigitalClock {
     updateTime() {
         const parts = this.getTimeParts();
         const minutesFormatted = parts.minutes.toString().padStart(2, '0');
-        const timesFormatted = `${parts.hour}:${minutesFormatted}`;
+        const secondsFormatted = parts.seconds.toString().padStart(2, '0');
+        const timesFormatted = `${parts.hour}:${minutesFormatted}:${secondsFormatted}`;
         const amPm = parts.isAm ? "AM" : "PM";
 
         const monthArr = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -75,6 +76,7 @@ class DigitalClock {
         return {
             hour : now.getHours() % 12 || 12, // return 0-23 
             minutes : now.getMinutes(), // return 0-59
+            seconds : now.getSeconds(), // return 0-59
             isAm : now.getHours() < 12,  // return boolean values
             date : now.getDate(), // return the day of the month (1-31)
             month : now.getMonth(), // return the month of the day (0-11) Note: 0 = Jan, 1 = Feb 
