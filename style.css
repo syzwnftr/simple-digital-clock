@@ -133,7 +133,6 @@ body.dark {
 }
 
 .container {
-  outline: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -145,11 +144,29 @@ body.dark {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .alarm-dialog input {
   margin-bottom: 1rem;
 }
 
+.controls button{
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  font-family: "Rajdhani", sans-serif;
+}
 
+.set-alarm {
+  background-color: rgb(59, 65, 151);
+  color: #fff;
+}
+
+.clear-alarm {
+  background-color: rgb(170, 59, 68);
+  color: #fff;
+}
 
