@@ -4,6 +4,15 @@ const body = document.querySelector('body');
 const clock = document.querySelector('.clock');
 const dateText = document.querySelector('.clock-date');
 
+const inputTime = document.querySelector('.alarmTime');
+const setAlarm = document.querySelector('.set-alarm');
+const clearAlarm = document.querySelector('.clear-alarm');
+const audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3');
+audio.loop = true;
+let alarmTime = null;
+let alarmTimeout = null;
+
+
 const enableDarkMode = () => {
     body.classList.add('dark');
     clock.classList.add('dark');
@@ -89,3 +98,38 @@ const clockElement = document.querySelector('.clock');
 const clockObject = new DigitalClock(clockElement);
 
 clockObject.start();
+
+
+// alarm part
+
+function setAlarmTime(value) {
+    alarmTime = value;
+    console.log(alarmTime);
+}
+
+function setAlarmFn() {
+    if(alarmTime) {
+        const current = new Date();
+        const timeToAlarm = new Date(alarmTime);
+
+        if (timeToAlarm > current) {
+            const timeout = timeToAlarm.getTime() - current.getTime();
+            alarmTimeout = setTimeout(() => {
+                audio.play();
+                alert(timeToAlarm);
+            }, timeout);
+            alert('Alarm set');
+        }
+    }
+}
+
+function clearAlarmFn() {
+    audio.pause();
+    if (alarmTimeout) {
+        clearTimeout(alarmTimeout);
+        alert('Alarm cleared');
+    }
+}
+
+setAlarm.addEventListener('click', setAlarmFn);
+clearAlarm.addEventListener('click', clearAlarmFn);
