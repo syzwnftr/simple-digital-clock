@@ -102,13 +102,33 @@ body.dark {
   background-color: #f1c40f;
 }
 
+.container {
+  /* outline: 1px solid black; */
+  padding: 4rem;
+  box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.73),
+  3px 3px 5px rgba(0, 0, 0, 0.29);
+  border-radius: 50%;
+}
+
+.container.dark {
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.29),
+  -3px -3px 5px  rgba(255, 255, 255, 0.1);
+}
+
+.clock {
+  margin-bottom: 0;
+  outline: 1px solid red;
+  text-align: center;
+}
+
 .clock.dark {
   color: #fff;
 }
 
 .clock-time,
 .clock-ampm,
-.clock-date {
+.clock-date,
+.clock-day {
   font-family: "Rajdhani", sans-serif;
 }
 
@@ -128,15 +148,7 @@ body.dark {
   color: #f1c40f;
 }
 
-.clock {
-  margin-bottom: 2rem;
-}
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 
 
