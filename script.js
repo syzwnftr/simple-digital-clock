@@ -5,15 +5,6 @@ const clock = document.querySelector('.clock');
 const dateText = document.querySelector('.clock-date');
 
 
-const inputTime = document.querySelector('.alarmTime');
-const btnSetAlarm = document.querySelector('.set-alarm');
-const btnClearAlarm = document.querySelector('.clear-alarm');
-const audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3');
-audio.loop = true;
-let alarmTime = null;
-let alarmTimeout = null;
-
-
 const enableDarkMode = () => {
     body.classList.add('dark');
     clock.classList.add('dark');
@@ -68,8 +59,8 @@ class DigitalClock {
     updateTime() {
         const parts = this.getTimeParts();
         const minutesFormatted = parts.minutes.toString().padStart(2, '0');
-        const secondsFormatted = parts.seconds.toString().padStart(2, '0');
-        const timesFormatted = `${parts.hour}:${minutesFormatted}:${secondsFormatted}`;
+        // const secondsFormatted = parts.seconds.toString().padStart(2, '0');
+        const timesFormatted = `${parts.hour}:${minutesFormatted}`;
         const amPm = parts.isAm ? "AM" : "PM";
 
         const monthArr = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -101,41 +92,3 @@ const clockObject = new DigitalClock(clockElement);
 clockObject.start();
 
 
-// alarm part
-
-// function setAlarmTime(value) {
-//     alarmTime = value;
-//     console.log(alarmTime);
-// }
-
-function setAlarmFn() {
-    if(alarmTime) {
-        const current = new Date();
-        const timeToAlarm = new Date(alarmTime);
-
-        if (timeToAlarm > current) {
-            const timeout = timeToAlarm.getTime() - current.getTime();
-            alarmTimeout = setTimeout(() => {
-                audio.play();
-                alert(timeToAlarm);
-            }, timeout);
-            alert('Alarm set');
-        }
-    }
-}
-
-function clearAlarmFn() {
-    audio.pause();
-    if (alarmTimeout) {
-        clearTimeout(alarmTimeout);
-        alert('Alarm cleared');
-    }
-}
-
-
-inputTime.addEventListener('change', function() {
-    alarmTime = this.value;
-    console.log(alarmTime);
-});
-btnSetAlarm.addEventListener('click', setAlarmFn);
-btnClearAlarm.addEventListener('click', clearAlarmFn);
