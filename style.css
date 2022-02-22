@@ -143,25 +143,6 @@ body.dark {
   font-family: 'Rubik', sans-serif;
 }
 
-.clock-time {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 600;
-  font-size: 4rem;
-  letter-spacing: 2px;
-  color: #2e3338;
-  outline: 1px solid black;
-}
-
-.clock.dark .clock-time {
-  color: #d3d4d4;
-}
-
-.clock-ampm {
-  font-size: 1rem;
-  display: block;
-  color: #dfbe3e;
-}
-
 .clock-day {
   margin-bottom: 0.5rem;
   color: #b6b7b8;
@@ -174,11 +155,29 @@ body.dark {
 .clock-date {
   font-size: 1rem;
   margin-bottom: 0.5rem;
-  color: #4b4f53;
+  color: #2c39538f;
 }
 
 .clock-date.dark {
   color: #aeafaf;
+}
+
+.clock-time {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  color: #2c3953;
+}
+
+.clock.dark .clock-time {
+  color: #d3d4d4;
+}
+
+.clock-ampm {
+  font-size: 1rem;
+  display: block;
+  color: #dfbe3e;
 }
 
 
