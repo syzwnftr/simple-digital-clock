@@ -5,6 +5,7 @@ const clock = document.querySelector('.clock');
 const dateText = document.querySelector('.clock-date');
 
 
+
 const enableDarkMode = () => {
     body.classList.add('dark');
     clock.classList.add('dark');
@@ -63,12 +64,17 @@ class DigitalClock {
         const timesFormatted = `${parts.hour}:${minutesFormatted}`;
         const amPm = parts.isAm ? "AM" : "PM";
 
-        const monthArr = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-        const date = `${parts.date} ${monthArr[parts.month]} ${parts.year}`;
+        const monthArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        const date = `${monthArr[parts.month]} ${parts.date}, ${parts.year}`;
+
+        const weekDay = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const currentDay = weekDay[parts.day];
+    
 
         this.element.querySelector('.clock-time').textContent = timesFormatted;
         this.element.querySelector('.clock-ampm').textContent = amPm;
         this.element.querySelector('.clock-date').textContent = date;
+        this.element.querySelector('.clock-day').textContent = currentDay;
     }
 
     getTimeParts() {
@@ -79,6 +85,7 @@ class DigitalClock {
             minutes : now.getMinutes(), // return 0-59
             seconds : now.getSeconds(), // return 0-59
             isAm : now.getHours() < 12,  // return boolean values
+            day : now.getDay(), // return day of the week (0-6) 0 = sunday, 1 = monday...
             date : now.getDate(), // return the day of the month (1-31)
             month : now.getMonth(), // return the month of the day (0-11) Note: 0 = Jan, 1 = Feb 
             year : now.getFullYear() // return the year of the date 
