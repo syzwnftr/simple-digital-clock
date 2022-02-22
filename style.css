@@ -149,6 +149,7 @@ body.dark {
 
 .alarm-dialog input {
   margin-bottom: 1rem;
+  padding: 1rem;
 }
 
 .controls button{
