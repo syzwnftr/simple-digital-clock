@@ -56,9 +56,10 @@ class DigitalClock {
     start() {
         this.updateTime(); // start the clock
         
+
         setInterval(() => {
             this.updateTime();
-        }, 500);  // update every half a second
+        }, 1000);  // update every second
     }
 
     updateTime() {
@@ -74,7 +75,6 @@ class DigitalClock {
         const weekDay = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         const currentDay = weekDay[parts.day];
     
-
         this.element.querySelector('.clock-time').textContent = timesFormatted;
         this.element.querySelector('.clock-ampm').textContent = amPm;
         this.element.querySelector('.clock-date').textContent = date;
@@ -95,6 +95,7 @@ class DigitalClock {
             year : now.getFullYear() // return the year of the date 
         };
     }
+  
 }
 
 const clockElement = document.querySelector('.clock');
