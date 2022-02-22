@@ -120,6 +120,7 @@ body.dark {
 .clock {
   margin-bottom: 0;
   margin: 1rem;
+  max-width: 300px;
   /* outline: 1px solid red; */
   border-radius: 50%;
   text-align: center;
