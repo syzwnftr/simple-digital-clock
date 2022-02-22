@@ -4,11 +4,13 @@ const body = document.querySelector('body');
 const clock = document.querySelector('.clock');
 const dateText = document.querySelector('.clock-date');
 const container = document.querySelector('.container');
+const dayText = document.querySelector('.clock-day');
 
 const enableDarkMode = () => {
     body.classList.add('dark');
     clock.classList.add('dark');
     dateText.classList.add('dark');
+    dayText.classList.add('dark');
     container.classList.add('dark');
     chckbox.checked = true;
     localStorage.setItem('theme', 'dark');
@@ -18,6 +20,8 @@ const disableDarkMode = () => {
     body.classList.remove('dark');
     clock.classList.remove('dark');
     dateText.classList.remove('dark');
+    dayText.classList.remove('dark');
+    container.classList.remove('dark');
     chckbox.checked = false;
     localStorage.setItem('theme', 'light');
 }
