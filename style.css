@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700;800&display=swap');
 
 * {
   margin: 0;
@@ -104,10 +105,11 @@ body.dark {
 
 .container {
   /* outline: 1px solid black; */
-  padding: 4rem;
+  /* padding: 5rem 5rem; */
   box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.73),
   3px 3px 5px rgba(0, 0, 0, 0.29);
   border-radius: 50%;
+  max-width: 100%;
 }
 
 .container.dark {
@@ -117,35 +119,64 @@ body.dark {
 
 .clock {
   margin-bottom: 0;
-  outline: 1px solid red;
+  margin: 1rem;
+  /* outline: 1px solid red; */
+  border-radius: 50%;
   text-align: center;
+  padding: 5rem;
+  box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.73),
+  3px 3px 5px rgba(0, 0, 0, 0.29);
+  /* box-shadow: inset -3px -3px 7px rgba(255, 255, 255, 0.73),
+  inset 3px 3px 5px rgba(0, 0, 0, 0.29); */
 }
 
 .clock.dark {
-  color: #fff;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.29),
+  -3px -3px 5px  rgba(255, 255, 255, 0.1);
 }
 
-.clock-time,
 .clock-ampm,
 .clock-date,
 .clock-day {
-  font-family: "Rajdhani", sans-serif;
+  /* font-family: "Rajdhani", sans-serif; */
+  font-family: 'Rubik', sans-serif;
 }
 
 .clock-time {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
   font-size: 4rem;
+  letter-spacing: 2px;
+  color: #2e3338;
+}
+
+.clock.dark .clock-time {
+  color: #d3d4d4;
 }
 
 .clock-ampm {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  display: block;
+  color: #dfbe3e;
+}
+
+.clock-day {
+  margin-bottom: 0.5rem;
+  color: #b6b7b8;
+}
+
+.clock-day.dark {
+  color: #434444;
 }
 
 .clock-date {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #4b4f53;
 }
 
 .clock-date.dark {
-  color: #f1c40f;
+  color: #aeafaf;
 }
 
 
