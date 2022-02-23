@@ -111,6 +111,7 @@ body.dark {
   3px 3px 5px rgba(0, 0, 0, 0.29);
   border-radius: 50%;
   max-width: 100%;
+  position: relative;
 }
 
 .container.dark {
@@ -129,11 +130,14 @@ body.dark {
   justify-content: center;
   box-shadow: inset -3px -3px 7px rgba(255, 255, 255, 0.3),
   inset 3px 3px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  background-color: #dde1e7;
 }
 
 .clock.dark {
   box-shadow: inset -3px -3px 7px rgba(255, 255, 255, 0.1),
   inset 3px 3px 5px rgba(0, 0, 0, 0.5); 
+  background-color: #1d1e20;
 }
 
 .clock-ampm,
@@ -166,7 +170,7 @@ body.dark {
   font-family: 'Rubik', sans-serif;
   font-weight: 600;
   font-size: 4rem;
-  letter-spacing: 2px;
+  letter-spacing: -1px;
   color: #2c3953;
 }
 
@@ -178,7 +182,7 @@ body.dark {
   font-size: 1rem;
   display: block;
   color: #dfbe3e;
-  animation: blink 1s linear infinite;
+  /* animation: blink 1s linear infinite; */
 }
 
 
@@ -194,6 +198,20 @@ body.dark {
   }
 }
 
+.hand {
+  --rotation: 0;
+  width: 3px;
+  height: 50%;
+  border-top-right-radius: 0.3rem;
+  border-top-left-radius: 0.3rem;
+  background-color: rgb(114, 95, 223);
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  z-index: -1;
+}
 
 
 
