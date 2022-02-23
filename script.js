@@ -5,6 +5,7 @@ const clock = document.querySelector('.clock');
 const dateText = document.querySelector('.clock-date');
 const container = document.querySelector('.container');
 const dayText = document.querySelector('.clock-day');
+const secondHand = document.querySelector('.hand-sec')
 
 const enableDarkMode = () => {
     body.classList.add('dark');
@@ -79,6 +80,7 @@ class DigitalClock {
         this.element.querySelector('.clock-ampm').textContent = amPm;
         this.element.querySelector('.clock-date').textContent = date;
         this.element.querySelector('.clock-day').textContent = currentDay;
+        
     }
 
     getTimeParts() {
@@ -102,5 +104,20 @@ const clockElement = document.querySelector('.clock');
 const clockObject = new DigitalClock(clockElement);
 
 clockObject.start();
+
+setInterval(setHand, 1000)
+
+function setHand() {
+    const current = new Date();
+    const secondRatio = current.getSeconds() / 60;
+
+    setRotation(secondHand, secondRatio);
+}
+
+function setRotation(element, rotationRatio) {
+    element.style.setProperty('--rotation', rotationRatio * 360);
+}
+
+setHand();
 
 
