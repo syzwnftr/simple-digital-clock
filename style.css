@@ -127,13 +127,13 @@ body.dark {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.73),
-  3px 3px 5px rgba(0, 0, 0, 0.29);
+  box-shadow: inset -3px -3px 7px rgba(255, 255, 255, 0.3),
+  inset 3px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .clock.dark {
-  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.29),
-  -3px -3px 5px  rgba(255, 255, 255, 0.1);
+  box-shadow: inset -3px -3px 7px rgba(255, 255, 255, 0.1),
+  inset 3px 3px 5px rgba(0, 0, 0, 0.5); 
 }
 
 .clock-ampm,
