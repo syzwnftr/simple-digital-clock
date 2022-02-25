@@ -219,6 +219,14 @@ body.dark {
     width: 250px;
     height: 250px;
   }
+
+  .clock-date {
+    font-size: 0.85rem;
+  }
+
+  .clock-time {
+    font-size: 3.8rem;
+  }
 }
 
 
