@@ -69,8 +69,8 @@ body.dark {
 }
 
 .checkbox:checked + .label .fa-moon {
-  transform: translateX(-40px);
   -webkit-transform: translateX(-40px);
+  transform: translateX(-40px);
   opacity: 1;
 }
 
@@ -84,8 +84,8 @@ body.dark {
 }
 
 .checkbox:checked + .label .fa-sun {
-  transform: translateX(-40px);
   -webkit-transform: translateX(-40px);
+  transform: translateX(-40px);
   opacity: 0;
 }
 
