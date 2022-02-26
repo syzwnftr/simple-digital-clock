@@ -104,7 +104,6 @@ body.dark {
 }
 
 .container {
-  /* outline: 1px solid black; */
   padding: 0.2rem;
   padding: 1rem;
   box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.73),
@@ -182,20 +181,6 @@ body.dark {
   font-size: 1rem;
   display: block;
   color: #dfbe3e;
-  /* animation: blink 1s linear infinite; */
-}
-
-
-@keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  /* 50% {
-    opacity: 0.5;
-  } */
-  100% {
-    opacity: 1;
-  }
 }
 
 .hand {
